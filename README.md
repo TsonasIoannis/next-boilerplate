@@ -41,10 +41,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Deploy on GitHub Pages
 
-GitHub uses Jekyll by default to build static pages, and Jekyll ignores all files prefixed with \_ which Next.js uses. 
+GitHub uses Jekyll by default to build static pages, and Jekyll ignores all files prefixed with \_ which Next.js uses.
 By creating a `.nojekyll` file in the root of the repository we completely bypass Jekyll processing on GitHub Pages.
 
-We need to update `next.config.js` to enable proper build on GitHub actions CI but maintain the same local development experience. In order to achieve that we will use the GitHub Actions default environment variables, `GITHUB_ACTIONS` and `GITHUB_REPOSITORY`, to conditionally provide a configuration to Next compiler. For GitHub actions to properly build and deploy the static assets we need the following configuration settings: `output`, `assetPrefix`, `basePath` and `images`.
+We need to update `next.config.js` to enable proper build on GitHub actions CI but maintain the same local development experience. 
+In order to achieve that we will use the GitHub Actions default environment variables, `GITHUB_ACTIONS` and `GITHUB_REPOSITORY`, to conditionally provide a configuration to Next compiler. 
+For GitHub actions to properly build and deploy the static assets we need the following configuration settings: `output`, `assetPrefix`, `basePath` and `images`.
 The first `output: export` option is required as a substitute for the `next export` command to build the static assets.
 We need to define an `assetPrefix` because GitHub uses Jekyll by default to build static pages, and Jekyll ignores all files prefixed with \_ which Next.js uses.
 Next.js uses its own image optimization, which doesn’t play nicely with GitHub Pages by default. We change this to the `unoptimized` option which works properly.
