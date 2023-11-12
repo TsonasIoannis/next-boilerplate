@@ -4,7 +4,9 @@
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
-let nextConfig = {};
+let nextConfig = {
+  output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
+};
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
