@@ -61,11 +61,11 @@ Finally add the build and deploy [workflow](./.github/workflows/gh_pages_deploy.
 
 ## Semantic Commit Messages
 
-The Conventional Commits specification is a lightweight convention on top of commit messages. 
-It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. 
+The Conventional Commits specification is a lightweight convention on top of commit messages.
+It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of.
 This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
 
-Format: 
+Format:
 
 ```
 <type>[optional scope]: <description>
@@ -77,19 +77,19 @@ Format:
 
 Types:
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+* **build**: Changes that affect the build tools or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, Sauce Labs)
 * **docs**: Documentation only changes
 * **feat**: A new feature
-* **fix**: A bug fix
+* **fix**: A bugfix
 * **perf**: A code change that improves performance
 * **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **style**: Changes that do not affect the meaning of the code (whitespace, formatting, missing semi-colons, etc)
 * **test**: Adding missing tests or correcting existing tests
 
 Commits are analysed in the semantic release action to define the next version and the entries to the Changelog.md
 
 References:
 
-- https://www.conventionalcommits.org/
-- https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [Commit Messages Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
