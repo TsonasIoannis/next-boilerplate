@@ -67,7 +67,7 @@ This convention dovetails with SemVer, by describing the features, fixes, and br
 
 Format:
 
-```
+```bash
 <type>[optional scope]: <description>
 
 [optional body]
