@@ -58,3 +58,38 @@ All `<Image>` tags are updated to include the prefix.
 Finally to enable GitHub Pages in the repository got to `Settings` and then `Pages` and in the `Build and deployment` section choose `GitHub Actions`.
 
 Finally add the build and deploy [workflow](./.github/workflows/gh_pages_deploy.yml).
+
+## Semantic Commit Messages
+
+The Conventional Commits specification is a lightweight convention on top of commit messages.
+It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of.
+This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+
+Format:
+
+```bash
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Types:
+
+* **build**: Changes that affect the build tools or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, Sauce Labs)
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bugfix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (whitespace, formatting, missing semi-colons, etc)
+* **test**: Adding missing tests or correcting existing tests
+
+Commits are analysed in the semantic release action to define the next version and the entries to the Changelog.md
+
+References:
+
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [Commit Messages Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
