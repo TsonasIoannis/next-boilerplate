@@ -5,13 +5,13 @@ export default function Docker() {
     <main className="flex flex-col p-24">
       <h1 className="md:text-4xl font-medium mb-2">Understanding Next.JS Docker Images </h1>
       <p>
-        If you've tried to containerize a NextJS app, you've probably found the{" "}
+        If you've tried to containerize a NextJS app, you've probably found the&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://nextjs.org/docs/pages/building-your-application/deploying#docker-image">
           official documentation
-        </Link> {" "}to be a bit lacking. Especially for beginners, the{" "}
+        </Link> &nbsp;to be a bit lacking. Especially for beginners, the&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile">
           provided Dockerfile
-        </Link>{" "}
+        </Link>&nbsp;
         might be confusing. In this post, we'll go over the Dockerfile and
         explain what exactly is going on!
       </p>
@@ -19,10 +19,10 @@ export default function Docker() {
       <h2 className="md:text-2xl font-medium my-2">The Dockerfile</h2>
 
       <p>
-        Let's start by looking at the Dockerfile{" "}
+        Let's start by looking at the Dockerfile&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile">
           provided by the wonderful NextJS
-        </Link>{" "}
+        </Link>&nbsp;
         team.
       </p>
 
@@ -65,7 +65,7 @@ export default function Docker() {
         package provides some of these libraries, reducing the chance of errors
         when installing dependencies. This line isn't always needed, but it's a
         good idea to include it just in case. If you want a more in-depth
-        explanation of why this might be needed, check out{" "}
+        explanation of why this might be needed, check out&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine">
           this Github Repo.
         </Link>
@@ -130,20 +130,20 @@ export default function Docker() {
         environment variable to <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">PRODUCTION</code>. This signals to NextJS
         that we are running in production mode, which will improve performance.
         This can also affect other parts of your app and NodeJS. Check out this
-        awesome{" "}
+        awesome&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production/">
           documentation page
-        </Link>{" "}
+        </Link>&nbsp;
         for more information!
       </p>
 
       <p>
         Next, we create a new group and user. This is done to improve security.
         If we didn't do this, our app would run as <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">root</code>, which can
-        be a security issue. Generally, you want to try to follow the{" "}
+        be a security issue. Generally, you want to try to follow the&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">
           "Principle of least privilege"
-        </Link>{" "}
+        </Link>&nbsp;
         , which states that you should only give your app the permissions that
         it needs. In this case, our app doesn't need root permissions, so we
         create a new user and group for it. We then finally switch to this new
@@ -156,10 +156,10 @@ export default function Docker() {
         includes all of our static assets. Then, we copy over the
         <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">./.next/standalone</code> and <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">./.next/static folders</code>,
         which include all of our compiled code. This step will only work if you
-        set your <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">output</code> mode in your{" "}
+        set your <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">output</code> mode in your&nbsp;
         <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://nextjs.org/docs/pages/api-reference/next-config-js/output">
           Next.JS Config
-        </Link>{" "}
+        </Link>&nbsp;
         . If you don't set your <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">output</code> mode, your dependencies will
         not be included!
       </p>
