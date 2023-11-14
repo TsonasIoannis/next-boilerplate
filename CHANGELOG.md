@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.0.0...v1.1.0) (2023-11-14)
+
+
+### Features
+
+* add github actions build and push section ([03ebf73](https://github.com/TsonasIoannis/next-boilerplate/commit/03ebf736aa7f3d11a5ca1900f6d2d1b2c4652a88))
+* add initial docker page ([b7df0d4](https://github.com/TsonasIoannis/next-boilerplate/commit/b7df0d4d361d7e6396537739f3bf7a4a11a2e909))
+
 # 1.0.0 (2023-11-08)
 
 
