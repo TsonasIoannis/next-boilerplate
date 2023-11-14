@@ -330,6 +330,17 @@ export default function Docker() {
         . That&apos;s it! We&apos;re done! 🎉🎉🎉
       </p>
 
+      <h2 className="md:text-2xl font-medium my-2">Bonus</h2>
+      <h3 className="md:text-1xl font-medium my-2">
+        GitHub Actions Build and Push
+      </h3>
+      <p>
+        We will be using GitHub Actions to build the image in every PR and then
+        build and push to GitHub Registry on main. The workflow can be found in{" "}
+        <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">
+          docker-publish.yml
+        </code>
+      </p>
       <h2 className="md:text-2xl font-medium my-2">Conclusion</h2>
 
       <p>
