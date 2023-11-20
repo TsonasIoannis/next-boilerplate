@@ -54,6 +54,12 @@ jobs:
       - name: Build my App
         run: npm run build && touch out/.nojekyll
       
+      - name: Cypress Component
+        run: npm run component:headless
+      
+      - name: Cypress E2E
+        run: npm run e2e:headless
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
