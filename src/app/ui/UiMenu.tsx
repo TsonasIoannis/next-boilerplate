@@ -9,9 +9,8 @@ export default function MainMenu() {
       <ListGroup.Item action>
         <Link href="/ui/react-bootstrap">React-Bootstrap</Link>
       </ListGroup.Item>
-      <ListGroup.Item>Lorem ipsum dolor sit amet</ListGroup.Item>
-      <ListGroup.Item>consectetur adipiscing elit</ListGroup.Item>
-      <ListGroup.Item>Vestibulum pharetra lectus</ListGroup.Item>
+      <ListGroup.Item><Link href="/ui/mui">MUI</Link></ListGroup.Item>
+      <ListGroup.Item><Link href="/ui/ant">Ant</Link></ListGroup.Item>
     </ListGroup>
   );
 }

@@ -9,7 +9,7 @@ export default function MainMenu() {
       <ListGroup.Item action>
         <Link href="/docker">Docker</Link>
       </ListGroup.Item>
-      <ListGroup.Item>Lorem ipsum dolor sit amet</ListGroup.Item>
+      <ListGroup.Item><Link href="/ui">UI</Link></ListGroup.Item>
       <ListGroup.Item>consectetur adipiscing elit</ListGroup.Item>
       <ListGroup.Item>Vestibulum pharetra lectus</ListGroup.Item>
     </ListGroup>
