@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.1.0...v1.2.0) (2023-11-20)
+
+
+### Features
+
+* add main menu ([661bdcf](https://github.com/TsonasIoannis/next-boilerplate/commit/661bdcf19ca7a74001904fd24ef6669ca8fc8136))
+* add ui initial section ([c3d5a1e](https://github.com/TsonasIoannis/next-boilerplate/commit/c3d5a1ee104b79b966cebeec9d5eb6589c1098c4))
+
 # [1.1.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.0.0...v1.1.0) (2023-11-14)
 
 
