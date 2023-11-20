@@ -45,14 +45,18 @@ jobs:
 
       - name: Run Cypress E2E Testing
         uses: cypress-io/github-action@v6
+        timeout-minutes: 3
         with:
           start: npm start
-          timeout-minutes: 3
+          env: BUILD_CYPRESS=true
+
       
       - name: Run Cypress Component Testing
         uses: cypress-io/github-action@v6
+        timeout-minutes: 3
         with:
           start: npm start
           # we have already installed everything
           install: false
           component: true
+          env: BUILD_CYPRESS=true
