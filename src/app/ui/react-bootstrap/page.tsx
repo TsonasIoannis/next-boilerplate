@@ -7,7 +7,7 @@ export default function ReactBootstrap() {
         How to Add React-Bootstrap to NextJS
       </h1>
       <p>
-        I this tutorial you'll learn how to add{" "}
+        I this tutorial you&apos;ll learn how to add{" "}
         <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">
           react-bootstrap
         </code>{" "}
@@ -31,7 +31,7 @@ export default function ReactBootstrap() {
         imperatively by directly manipulating the DOM. In contrast, React uses
         updates to the state to update the virtual DOM. In this way,
         React-Bootstrap provides a more reliable solution by incorporating
-        Bootstrap functionality into React's virtual DOM. Below are a few
+        Bootstrap functionality into React&apos;s virtual DOM. Below are a few
         examples of how React-Bootstrap components differ from Bootstrap.
       </p>
       <h2 className="md:text-2xl font-medium my-2">Install and Setup</h2>
@@ -53,7 +53,7 @@ export default function ReactBootstrap() {
         </code>
       </p>
       <p>
-        We'll only use the{" "}
+        We&apos;ll only use the{" "}
         <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">
           scss
         </code>{" "}
@@ -64,7 +64,7 @@ export default function ReactBootstrap() {
         <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">
           src/app/globals.css
         </code>
-        , let's import{" "}
+        , let&apos;s import{" "}
         <code className="text-sm sm:text-base inline-flex text-left items-center bg-gray-700 text-white rounded-lg p-1">
           bootstrap.min.css
         </code>
@@ -80,7 +80,7 @@ export default function ReactBootstrap() {
         </code>{" "}
         wrapper needed for a lot of components. A lot of the codebase for
         React-Bootstrap depends on user context or state thus making them
-        incompatible for RSC. However, components are still SSR'd and produce
+        incompatible for RSC. However, components are still SSR&apos;d and produce
         HTML that is sent to the client, thus React-Bootstrap components are all
         SSR compatible. The best solution seems to wrap components as close to
         the leafs in{" "}
