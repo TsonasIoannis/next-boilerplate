@@ -9,17 +9,22 @@ let nextConfig = {
   output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
 };
 
-if (isGithubActions && !isCypress) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  nextConfig = {
-    output: 'export',
-    assetPrefix: `/${repo}/`,
-    basePath: `/${repo}`,
-    images: {
-      unoptimized: true,
-    },
-  };
+if (isGithubActions) {
+  if (isCypress) {
+    nextConfig = {
+      output: undefined,
+    };
+  } else {
+    const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
+    nextConfig = {
+      output: "export",
+      assetPrefix: `/${repo}/`,
+      basePath: `/${repo}`,
+      images: {
+        unoptimized: true,
+      },
+    };
+  }
 }
 
 module.exports = nextConfig;
