@@ -3,12 +3,13 @@
  */
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const isCypress = process.env.BUILD_CYPRESS || false;
 
 let nextConfig = {
   output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
 };
 
-if (isGithubActions) {
+if (isGithubActions && !isCypress) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
 
   nextConfig = {

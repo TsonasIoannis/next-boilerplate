@@ -21,6 +21,7 @@ jobs:
           # Disable running of tests within install job
           runTests: false
           build: npm run build
+          env: BUILD_CYPRESS=true
 
       - name: Save build folder
         uses: actions/upload-artifact@v3
@@ -42,8 +43,16 @@ jobs:
           name: build
           path: build
 
-      - name: Cypress run
+      - name: Run Cypress E2E Testing
         uses: cypress-io/github-action@v6
         with:
           start: npm start
           timeout-minutes: 3
+      
+      - name: Run Cypress Component Testing
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          # we have already installed everything
+          install: false
+          component: true
