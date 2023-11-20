@@ -26,9 +26,9 @@ jobs:
       - name: Save build folder
         uses: actions/upload-artifact@v3
         with:
-          name: build
+          name: .next
           if-no-files-found: error
-          path: build
+          path: .next
 
   cypress-run:
     runs-on: ubuntu-22.04
@@ -40,8 +40,8 @@ jobs:
       - name: Download the build folder
         uses: actions/download-artifact@v3
         with:
-          name: build
-          path: build
+          name: .next
+          path: .next
 
       - name: Run Cypress E2E Testing
         uses: cypress-io/github-action@v6
