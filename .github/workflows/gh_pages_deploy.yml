@@ -53,6 +53,8 @@ jobs:
 
       - name: Build my App
         run: npm run build && touch out/.nojekyll
+        env:
+          BUILD_EXPORT: true
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
