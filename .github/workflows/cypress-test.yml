@@ -46,13 +46,10 @@ jobs:
         uses: cypress-io/github-action@v6
         timeout-minutes: 3
         with:
-          start: npm start
+          command: npm run e2e:headless
       
       - name: Run Cypress Component Testing
         uses: cypress-io/github-action@v6
         timeout-minutes: 3
         with:
-          start: npm start
-          # we have already installed everything
-          install: false
-          component: true
+          command: npm run component:headless
