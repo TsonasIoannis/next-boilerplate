@@ -93,3 +93,27 @@ References:
 
 - [Conventional Commits](https://www.conventionalcommits.org/)
 - [Commit Messages Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
+
+## Testing
+
+### Running Cypress Tests
+
+1. Component Tests
+
+```bash
+npm run component # or npm run component:headless
+```
+
+1. End-to-end Tests
+
+```bash
+npm run e2e # or npm run e2e:headless
+```
+
+### Writing Tests
+
+Cypress e2e tests are located in the cypress/e2e directory.
+To write new tests, add .cy.ts files in this directory.
+
+Cypress component tests are located in the same directory as the component
+they are testing. To write new tests, add *component_name*.cy.tsx
