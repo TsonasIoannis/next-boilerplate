@@ -2,15 +2,27 @@
 
 import { useState, useReducer } from "react";
 import { ThemeContextProvider, useTheme } from "./ContextProvider";
+import { store } from "./store";
+import { Provider } from "react-redux";
+import { useAppDispatch, useAppSelector } from "./hooks";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+  selectCount,
+} from "./counterSlice";
 
 export default function State() {
   return (
-    <ThemeContextProvider>
-      <main>
-        <SimpleState />
+    <>
+      <SimpleState />
+      <ThemeContextProvider>
         <ContextState />
-      </main>
-    </ThemeContextProvider>
+      </ThemeContextProvider>
+      <Provider store={store}>
+        <ReduxState />
+      </Provider>
+    </>
   );
 }
 
@@ -54,5 +66,37 @@ function ContextState() {
         Toggle mode
       </button>
     </div>
+  );
+}
+
+function ReduxState() {
+  const dispatch = useAppDispatch();
+  const count = useAppSelector(selectCount);
+  const [incrementAmount, setIncrementAmount] = useState<number>(0);
+
+  return (
+    <>
+      <h1>Welcome to the greatest app in the world!</h1>
+      <h2>
+        The current number is
+        {count}
+      </h2>
+      <div>
+        <input
+          value={incrementAmount}
+          onChange={(e) => setIncrementAmount(Number(e.target.value))}
+          type="number"
+        />
+        <button
+          onClick={() => dispatch(incrementByAmount(Number(incrementAmount)))}
+        >
+          Increment by amount
+        </button>
+      </div>
+      <div>
+        <button onClick={() => dispatch(decrement())}>Decrement by 1</button>
+        <button onClick={() => dispatch(increment())}>Increment by 1</button>
+      </div>
+    </>
   );
 }
