@@ -1,9 +1,11 @@
 import MainMenu from "./MainMenu";
-
+import { UIContextProvider } from "./UiContext";
 export default function Home() {
   return (
     <main>
-      <MainMenu />
+      <UIContextProvider>
+        <MainMenu />
+      </UIContextProvider>
     </main>
   );
 }
