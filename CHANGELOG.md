@@ -1,5 +1,20 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.2.0...v1.3.0) (2023-12-03)
+
+
+### Bug Fixes
+
+* add keys to iterators ([8f3dfbe](https://github.com/TsonasIoannis/next-boilerplate/commit/8f3dfbead9baf25418c98e8721a674614108fbc5))
+
+
+### Features
+
+* add ant ([4367adf](https://github.com/TsonasIoannis/next-boilerplate/commit/4367adf0cc68700abadf083ad6f2345240b3de1e))
+* add base state examples ([69f2083](https://github.com/TsonasIoannis/next-boilerplate/commit/69f2083d71e9f1bafef22194313dee21918efa99))
+* add rtk ([273e467](https://github.com/TsonasIoannis/next-boilerplate/commit/273e467a5a42c2eca6c7383f06826f913680b386))
+* use state context for UI libs switch ([42f677c](https://github.com/TsonasIoannis/next-boilerplate/commit/42f677c75107db580fab10b0132f69b57ada1e9b))
+
 # [1.2.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.1.0...v1.2.0) (2023-11-20)
 
 
