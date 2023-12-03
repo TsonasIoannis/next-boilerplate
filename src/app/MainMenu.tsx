@@ -2,6 +2,7 @@
 import { useUI } from "./UiContext";
 import BootstrapMainMenu from "./BootstrapMainMenu";
 import MuiMainMenu from "./MuiMainMenu";
+import AntMainMenu from "./AntMainMenu";
 
 export default function MainMenu() {
   const { ui } = useUI();
@@ -9,6 +10,7 @@ export default function MainMenu() {
     <>
       {ui == "bootstrap" ? <BootstrapMainMenu /> : null}
       {ui == "mui" ? <MuiMainMenu /> : null}
+      {ui == "ant" ? <AntMainMenu /> : null}
     </>
   );
 }
