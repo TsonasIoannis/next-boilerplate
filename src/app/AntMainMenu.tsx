@@ -24,8 +24,10 @@ export default function AntMainMenu() {
             setContextUI(event.target.value as UI);
           }}
         >
-          {radios.map((radio) => (
-            <Radio value={radio.value}>{radio.name}</Radio>
+          {radios.map((radio, idx) => (
+            <Radio value={radio.value} key={idx}>
+              {radio.name}
+            </Radio>
           ))}
         </Radio.Group>
 

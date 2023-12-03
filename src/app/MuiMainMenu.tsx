@@ -35,8 +35,9 @@ export default function MuiMainMenu() {
             setContextUI(event.target.value as UI);
           }}
         >
-          {radios.map((radio) => (
+          {radios.map((radio, idx) => (
             <FormControlLabel
+              key={idx}
               value={radio.value}
               label={radio.name}
               control={<Radio />}
