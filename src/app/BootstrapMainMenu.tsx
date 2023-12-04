@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { UI, useUI } from "./UiContext";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import { Container, ListGroup } from "react-bootstrap";
+import { Container, ListGroup, Row } from "react-bootstrap";
 import Link from "next/link";
 
 export default function BootstrapMainMenu() {
@@ -13,26 +13,30 @@ export default function BootstrapMainMenu() {
     { name: "Ant", value: "ant" },
   ];
   return (
-    <>
-      <p>Current UI library: {ui}</p>
-      <ButtonGroup className="mb-2">
-        {radios.map((radio, idx) => (
-          <Button
-            key={idx}
-            id={`radio-${idx}`}
-            variant="primary"
-            name="radio"
-            value={radio.value}
-            active={ui === radio.value}
-            onClick={() => {
-              setContextUI(radio.value as UI);
-            }}
-          >
-            {radio.name}
-          </Button>
-        ))}
-      </ButtonGroup>
-      <Container>
+    <Container>
+      <Row>Current UI library: {ui}</Row>
+      <Row>
+        {" "}
+        <ButtonGroup className="mb-2">
+          {radios.map((radio, idx) => (
+            <Button
+              key={idx}
+              id={`radio-${idx}`}
+              variant="primary"
+              name="radio"
+              value={radio.value}
+              active={ui === radio.value}
+              onClick={() => {
+                setContextUI(radio.value as UI);
+              }}
+            >
+              {radio.name}
+            </Button>
+          ))}
+        </ButtonGroup>
+      </Row>
+
+      <Row>
         <ListGroup>
           <ListGroup.Item action>
             <Link href="/docker">Docker</Link>
@@ -45,7 +49,7 @@ export default function BootstrapMainMenu() {
           </ListGroup.Item>
           <ListGroup.Item>Vestibulum pharetra lectus</ListGroup.Item>
         </ListGroup>
-      </Container>
-    </>
+      </Row>
+    </Container>
   );
 }
