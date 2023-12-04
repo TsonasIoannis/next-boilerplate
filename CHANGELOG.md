@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.3.0...v1.4.0) (2023-12-04)
+
+
+### Bug Fixes
+
+* use full height by default ([c14ab99](https://github.com/TsonasIoannis/next-boilerplate/commit/c14ab990f21df90b6b3091da888beee7295e2651))
+
+
+### Features
+
+* add mui dark mode detection ([39c5056](https://github.com/TsonasIoannis/next-boilerplate/commit/39c50568ce6f41fc50e6e327d26375af5ae3d618))
+
 # [1.3.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.2.0...v1.3.0) (2023-12-03)
 
 
