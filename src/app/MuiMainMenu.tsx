@@ -79,7 +79,12 @@ export default function MuiMainMenu() {
                 <Link href="/state">State Management</Link>
               </ListItemButton>
             </ListItem>
-            <ListItem>Vestibulum pharetra lectus</ListItem>
+            <ListItem>
+              {" "}
+              <ListItemButton>
+                <Link href="/authentication">Authentication</Link>
+              </ListItemButton>
+            </ListItem>
           </List>
         </Container>
       </CssBaseline>
