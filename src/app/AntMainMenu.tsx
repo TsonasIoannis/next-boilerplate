@@ -41,7 +41,9 @@ export default function AntMainMenu() {
           <List.Item>
             <Link href="/state">State Management</Link>
           </List.Item>
-          <List.Item>Vestibulum pharetra lectus</List.Item>
+          <List.Item>
+            <Link href="/authentication">Authentication</Link>
+          </List.Item>
         </List>
       </Content>
     </>
