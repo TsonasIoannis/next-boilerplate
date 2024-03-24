@@ -47,7 +47,9 @@ export default function BootstrapMainMenu() {
           <ListGroup.Item action>
             <Link href="/state">State Management</Link>
           </ListGroup.Item>
-          <ListGroup.Item>Vestibulum pharetra lectus</ListGroup.Item>
+          <ListGroup.Item action>
+            <Link href="/authentication">Authentication</Link>
+          </ListGroup.Item>
         </ListGroup>
       </Row>
     </Container>
