@@ -6,8 +6,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import AuthProvider from "./AuthProvider";
+import { authOptions } from "./api/auth/[...nextauth]/options";
 
 const inter = Inter({ subsets: ["latin"] });
 
