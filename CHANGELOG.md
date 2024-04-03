@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.4.0...v1.5.0) (2024-04-03)
+
+
+### Features
+
+* add initial next auth ([b49fd2b](https://github.com/TsonasIoannis/next-boilerplate/commit/b49fd2b3e978c73ba763a9db9b016d1f13f0ef0d))
+
 # [1.4.0](https://github.com/TsonasIoannis/next-boilerplate/compare/v1.3.0...v1.4.0) (2023-12-04)
 
 
