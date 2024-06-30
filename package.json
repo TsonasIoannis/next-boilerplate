@@ -17,7 +17,7 @@
     "@emotion/styled": "~11.11.5",
     "@fontsource/roboto": "~5.0.12",
     "@mui/material": "~5.15.14",
-    "@reduxjs/toolkit": "1.9.7",
+    "@reduxjs/toolkit": "2.2.6",
     "antd": "~5.16.0",
     "bootstrap": "~5.3.3",
     "next-auth": "~4.24.7",
